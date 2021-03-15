@@ -7,4 +7,25 @@
 
 例子代码依赖：OpenCV 4.2.0
 
+执行编译脚本：
+
+~~~bash
+./build_opencv_mat_mem.sh
+~~~
+
+生成:
+
+opencv_mat_to_mem 和 opencv_mat_from_mem 两个可执行文件。
+
+~~~bash
+# 执行 opencv_mat_to_mem 可以将视频源流中的视频帧图（mat）传输到 共享内存
+./opencv_mat_to_mem <rtsp_address|video_file>
+~~~
+
+~~~bash
+# 重新开一个窗口，执行 opencv_mat_from_mem 可以将共享内存中的视频帧(mat)数据，放入到新建的mat对象中，并转存到 I/O 磁盘上面
+./opencv_mat_from_mem
+~~~
+
+
 在操作系统 Ubuntu 16.04 中测试通过
